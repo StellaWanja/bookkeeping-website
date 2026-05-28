@@ -27,3 +27,79 @@
     @apply w-full h-full object-cover;
   }
 }
+
+/* Hide scrollbar for marquee and slide effects */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@utility clip-path-polygon {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+@utility pointer-events-all {
+  pointer-events: all;
+}
+
+@utility navlink-underline-hover {
+  @apply relative after:content-[''] after:absolute after:left-0 after:-bottom-1
+           after:h-0.5 after:w-full after:bg-current
+           after:origin-left after:scale-x-0
+           after:transition-transform after:duration-300 ease-out
+           hover:after:scale-x-100;
+}
+
+@layer components {
+  /* PRELOADER */
+  .preloader-text-1,
+  .preloader-text-2,
+  .preloader-text-3 {
+    @apply absolute inset-0 flex items-center justify-center  text-black font-bold text-4xl md:text-[8rem] text-center tracking-tighter font-body;
+  }
+
+  /* NAVBAR */
+  .menu-hamburger-icon span {
+    /* start very slowly, speed up in the middle, slow at the end (x1,y1,x2,y2) */
+    @apply absolute w-5 h-0.5 bg-black transition-all duration-[0.75s] ease-[cubic-bezier(0.87,0,0.13,1)] origin-center will-change-transform;
+  }
+
+  .menu-hamburger-icon span:nth-child(1) {
+    @apply transform -translate-y-1;
+  }
+
+  .menu-hamburger-icon span:nth-child(2) {
+    @apply transform translate-y-1;
+  }
+
+  .menu-hamburger-icon.active span:nth-child(1) {
+    @apply transform translate-y-0 rotate-45 scale-x-[1.05] bg-black;
+  }
+
+  .menu-hamburger-icon.active span:nth-child(2) {
+    @apply transform translate-y-0 -rotate-45 scale-x-[1.05] bg-black;
+  }
+
+  .menu-overlay,
+  .menu-overlay-content {
+    @apply fixed top-0 left-0 w-full h-svh bg-cream text-black overflow-hidden z-10;
+  }
+
+  .menu-overlay {
+    /* clip lies at top edge of screen, 0,0(top left), 100,0(top right) - has zero area, is invinsible at start */
+    @apply clip-path-polygon will-change-[clip-path];
+  }
+
+  .menu-media-wrapper {
+    @apply hidden lg:block flex-2 opacity-0 will-change-[opacity];
+  }
+
+  .line {
+    @apply relative will-change-transform;
+  }
+
+  /* APP CONTAINER */
+}

@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
-interface PreloaderProps {
-  onComplete: () => void;
-}
-
-export default function Preloader({ onComplete }: PreloaderProps) {
+export default function Preloader({ onComplete }: { onComplete: () => void }) {
   const [percent, setPercent] = useState(0);
 
   useEffect(() => {
@@ -70,15 +66,15 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="font-sans text-[10px] md:text-xs uppercase tracking-[0.2em] text-white font-medium"
+            className="font-body text-[10px] md:text-xs uppercase tracking-[0.2em] text-white font-medium"
           >
-            (THE FINANCIAL ARCHITECT // LEDGER & ADVISORY)
+            (LEDGER & ADVISORY)
           </motion.span>
         </div>
 
         {/* 3. Spinning loader at the bottom right */}
         <div className="flex items-center gap-4 self-end">
-          <span className="font-mono text-[10px] text-stone-500 uppercase tracking-widest">
+          <span className="font-body text-[10px] text-stone-500 uppercase tracking-widest">
             {percent.toString().padStart(3, "0")}%
           </span>
           <div className="relative w-5 h-5">

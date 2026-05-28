@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { AnimatePresence } from "motion/react";
-import Preloader from "./components/preloader/PreLoader";
+import Preloader from "./components/PreLoader";
+import Header from "./components/Header";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   // Prevent background scrolling while loading
   useEffect(() => {
@@ -23,6 +25,11 @@ function App() {
       <AnimatePresence mode="wait">
         {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
       </AnimatePresence>
+
+      {/* Main App Content revealed once loading finishes */}
+      <div className={`transition-opacity duration-1000 ease-out ${isLoading ? "opacity-0" : "opacity-100"}`}>
+        <Header onContactClick={() => setIsContactOpen(true)} />
+      </div>
     </div>
   );
 }
