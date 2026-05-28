@@ -18,7 +18,7 @@ function Hero({ onContactClick }: { onContactClick: () => void }) {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
     },
   };
 
@@ -28,7 +28,7 @@ function Hero({ onContactClick }: { onContactClick: () => void }) {
       transition: {
         duration: 6,
         repeat: Infinity,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   };
@@ -36,7 +36,7 @@ function Hero({ onContactClick }: { onContactClick: () => void }) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen bg-[#F9F8F6] pt-28 md:pt-36 pb-16 flex items-center overflow-hidden"
+      className="relative min-h-screen pt-28 md:pt-36 pb-16 flex items-center overflow-hidden"
     >
       {/* Absolute subtle background geometric guides */}
       <div className="absolute inset-0 z-0 flex justify-between px-6 md:px-12 pointer-events-none opacity-20">
@@ -176,7 +176,8 @@ function Hero({ onContactClick }: { onContactClick: () => void }) {
                 COMPLIANCE INTEGRITY
               </span>
               <p className="font-sans text-[11px] leading-snug text-neutral-200 font-light">
-                Fully compliant CPA Kenya–certified bookkeeping and double-entry accounting.
+                Fully compliant CPA Kenya–certified bookkeeping and double-entry
+                accounting.
               </p>
             </div>
           </motion.div>

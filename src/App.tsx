@@ -4,6 +4,7 @@ import { AnimatePresence } from "motion/react";
 import Preloader from "./components/PreLoader";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import LogoMarquee from "./components/LogoMarquee";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +36,7 @@ function App() {
 
         <main id="main-landing-content">
           <Hero onContactClick={() => setIsContactOpen(true)} />
+          <LogoMarquee />
         </main>
       </div>
     </div>
