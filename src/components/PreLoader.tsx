@@ -57,7 +57,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="text-8xl md:text-[11rem] font-body font-extrabold text-white tracking-tighter leading-[0.85] select-none"
+            className="text-8xl md:text-[11rem] font-extrabold text-white tracking-tighter leading-[0.85] select-none"
           >
             NK
           </motion.h1>
@@ -66,7 +66,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="font-body text-[10px] md:text-xs uppercase tracking-[0.2em] text-white font-medium"
+            className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-white font-medium"
           >
             (LEDGER & ADVISORY)
           </motion.span>
@@ -74,7 +74,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
 
         {/* 3. Spinning loader at the bottom right */}
         <div className="flex items-center gap-4 self-end">
-          <span className="font-body text-[10px] text-stone-500 uppercase tracking-widest">
+          <span className="text-[10px] text-stone-500 uppercase tracking-widest">
             {percent.toString().padStart(3, "0")}%
           </span>
           <div className="relative w-5 h-5">

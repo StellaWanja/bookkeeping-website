@@ -3,6 +3,7 @@ import "./App.css";
 import { AnimatePresence } from "motion/react";
 import Preloader from "./components/PreLoader";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,8 +28,14 @@ function App() {
       </AnimatePresence>
 
       {/* Main App Content revealed once loading finishes */}
-      <div className={`transition-opacity duration-1000 ease-out ${isLoading ? "opacity-0" : "opacity-100"}`}>
+      <div
+        className={`transition-opacity duration-1000 ease-out ${isLoading ? "opacity-0" : "opacity-100"}`}
+      >
         <Header onContactClick={() => setIsContactOpen(true)} />
+
+        <main id="main-landing-content">
+          <Hero onContactClick={() => setIsContactOpen(true)} />
+        </main>
       </div>
     </div>
   );

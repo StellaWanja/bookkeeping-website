@@ -51,21 +51,21 @@ function Header({ onContactClick }: { onContactClick: () => void }) {
               e.preventDefault();
               scrollToSection("#hero");
             }}
-            className="flex items-center gap-3 select-none group"
+            className="flex items-center gap-4 select-none group"
           >
-            <div className="relative w-7 h-7 flex items-center justify-center">
-              <span className="absolute inset-0 border border-black uppercase flex items-center justify-center font-body font-semibold group-hover:rotate-45 transition-transform duration-500">
+            <div className="relative w-9 h-9 flex items-center justify-center">
+              <span className="absolute inset-0 border border-black uppercase flex items-center justify-center font-semibold group-hover:rotate-45 transition-transform duration-500">
                 N
               </span>
-              <span className="absolute inset-0 bg-black text-white uppercase flex items-center justify-center font-body font-semibold scale-0 group-hover:scale-100 group-hover:rotate-45 transition-all duration-500">
+              <span className="absolute inset-0 bg-black text-white uppercase flex items-center justify-center font-semibold scale-0 group-hover:scale-100 group-hover:rotate-45 transition-all duration-500">
                 K
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="font-body font-bold tracking-tight text-lg text-black leading-none">
+              <span className="font-bold tracking-tight text-lg text-black leading-none">
                 NixKeana Solutions
               </span>
-              <span className="font-body text-[9px] tracking-widest text-gold uppercase leading-none mt-1">
+              <span className="text-[11px] tracking-widest text-gold uppercase font-semibold leading-none mt-1">
                 Bespoke Ledger Engineering
               </span>
             </div>
@@ -82,7 +82,7 @@ function Header({ onContactClick }: { onContactClick: () => void }) {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="relative font-body font-medium tracking-wide text-black/70 hover:text-black transition-colors py-2 group select-none"
+                className="relative font-medium tracking-wide text-black/70 hover:text-black transition-colors py-2 group select-none"
               >
                 {link.name}
                 {/* Custom sliding line hover */}
@@ -137,7 +137,7 @@ function Header({ onContactClick }: { onContactClick: () => void }) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.05 }}
                   onClick={() => scrollToSection(link.href)}
-                  className="font-body text-2xl font-bold text-onyx tracking-wide hover:text-slate-green transition-colors cursor-pointer"
+                  className="text-2xl font-bold text-onyx tracking-wide hover:text-slate-green transition-colors cursor-pointer"
                 >
                   {link.name}
                 </motion.button>
@@ -164,10 +164,10 @@ function Header({ onContactClick }: { onContactClick: () => void }) {
 
             {/* Micro branding footer inside overlay */}
             <div className="text-center space-y-2 border-t border-gold pt-6">
-              <p className="font-body text-[9px] uppercase tracking-[0.25em] text-black/80 font-bold">
+              <p className="text-[9px] uppercase tracking-[0.25em] text-black/80 font-bold">
                 NixKeana Solutions &copy; {new Date().getFullYear()}
               </p>
-              <p className="text-[10px] text-black/80 font-body">
+              <p className="text-[10px] text-black/80">
                 Bookkeeping and Advisory
               </p>
             </div>
