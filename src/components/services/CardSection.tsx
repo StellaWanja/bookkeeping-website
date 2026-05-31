@@ -11,7 +11,6 @@ interface ServiceItem {
   tagline: string;
   description: string;
   features: string[];
-  illustration: React.ReactNode;
 }
 
 interface CardSectionProps {
@@ -77,7 +76,7 @@ function CardSection({ service, index, y, scale, opacity, activeCardIndex }: Car
             {service.features.map((feature, fIdx) => (
               <li
                 key={fIdx}
-                className="flex items-start gap-2 text-xs md:text-sm leading-tight"
+                className="flex items-start gap-2 text-sm md:text-base leading-tight"
               >
                 <span className="mt-0.5 shrink-0">
                   <Check

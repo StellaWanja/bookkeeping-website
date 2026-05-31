@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { useMotionValueEvent, useScroll, useTransform } from "motion/react";
-import { SERVICES } from "../data.tsx";
+import { SERVICES } from "../data";
 import CardSection from "./services/CardSection.tsx";
 
 export default function ServicesAccordion() {
@@ -71,7 +71,7 @@ export default function ServicesAccordion() {
   return (
     <section
       ref={containerRef}
-      id="services-section"
+      id="services"
       className="relative h-[300vh] bg-services"
     >
       {/* Sticky container that stays locked (pinned) viewport-wide during scroll progression */}
@@ -86,9 +86,10 @@ export default function ServicesAccordion() {
             </div>
             <div>
               <p className="text-sm md:text-base text-black max-w-sm ml-auto md:mr-0 leading-relaxed normal-case">
-                clean, robust frameworks provide absolute scaling power. we
-                engineer high-fidelity foundations to optimize resource
-                structures and secure capital positions.
+                We build reliable financial systems that support sustainable
+                business growth. By structuring your finances properly, we help
+                you allocate resources efficiently, improve financial control,
+                and prepare your business for scale.
               </p>
             </div>
           </div>

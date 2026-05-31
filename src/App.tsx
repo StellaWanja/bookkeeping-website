@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import LogoMarquee from "./components/LogoMarquee";
 import Services from "./components/Services";
+import AboutUs from "./components/AboutUs";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -36,6 +37,7 @@ function App() {
           <Hero onContactClick={() => setIsContactOpen(true)} />
           <LogoMarquee />
           <Services />
+          <AboutUs />
         </main>
       </div>
     </div>
