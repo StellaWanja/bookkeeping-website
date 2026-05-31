@@ -7,7 +7,7 @@ import {
   DraftingCompass,
   Landmark,
 } from "lucide-react";
-import { MARQUEE_LOGOS } from "../../data";
+import { MARQUEE_LOGOS } from "../data";
 import { useEffect, useRef, useState } from "react";
 
 function LogoMarquee() {
@@ -32,7 +32,7 @@ function LogoMarquee() {
   }, []);
 
   return (
- <section className="relative overflow-hidden py-12 select-none">
+ <section className="relative overflow-hidden py-12 select-none bg-alabaster">
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-8">
         <span className="font-bold text-sm uppercase tracking-widest text-black block text-center lg:text-left mb-2">
           TRUSTED PARTNER AT ALL STAGES
@@ -41,10 +41,10 @@ function LogoMarquee() {
 
       <div className="relative overflow-hidden">
         {/* left fade */}
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-linear-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-linear-to-r from-alabaster to-transparent" />
 
         {/* right fade */}
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-linear-to-l from-white to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-linear-to-l from-alabaster to-transparent" />
 
         <motion.div
           ref={trackRef}

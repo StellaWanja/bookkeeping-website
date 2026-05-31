@@ -5,6 +5,7 @@ import Preloader from "./components/PreLoader";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import LogoMarquee from "./components/LogoMarquee";
+import Services from "./components/Services";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,10 +21,7 @@ function App() {
   }, [isLoading]);
 
   return (
-    <div
-      id="app-root-container"
-      className="min-h-screen bg-[#F9F8F6] selection:bg-[#4A5D4E] selection:text-[#F9F8F6]"
-    >
+    <div id="app-root-container" className="min-h-screen relative">
       <AnimatePresence mode="wait">
         {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
       </AnimatePresence>
@@ -37,6 +35,7 @@ function App() {
         <main id="main-landing-content">
           <Hero onContactClick={() => setIsContactOpen(true)} />
           <LogoMarquee />
+          <Services />
         </main>
       </div>
     </div>

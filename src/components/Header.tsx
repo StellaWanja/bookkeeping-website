@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { NAVLINKS } from '../../data';
+import { NAVLINKS } from '../data';
 
 function Header({ onContactClick }: { onContactClick: () => void }) {
   const [isScrolled, setIsScrolled] = useState(false);

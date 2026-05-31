@@ -11,6 +11,8 @@
   --color-lightblue: #5b88b2;
   --color-black: #111111;
   --color-white: #fcfcfc;
+  --color-alabaster: #F9F8F6;
+  --color-services:#FAF9F5;
   --animate-marquee: marquee 15s linear infinite;
 
   @keyframes marquee {
