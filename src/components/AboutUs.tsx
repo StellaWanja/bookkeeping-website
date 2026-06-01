@@ -28,7 +28,7 @@ function AboutUs() {
 
         <div className="max-w-5xl w-full mx-auto px-6 md:px-12 text-center relative z-10">
           {/* Oversized centered text block with scroll-to-fill interactive mapping */}
-          <p className="font-extrabold text-[#1A1A1B] text-2xl sm:text-4xl md:text-5xl tracking-tight leading-[1.3] text-left">
+          <p className="font-extrabold text-black text-2xl sm:text-4xl md:text-5xl tracking-tight leading-[1.3] text-left">
             {words.map((word, idx) => {
               // Map individual progress elegantly
               const activeStart = 0.0;

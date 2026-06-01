@@ -60,7 +60,7 @@ function Header({ onContactClick }: { onContactClick: () => void }) {
                 NixKeana Solutions
               </span>
               <span className="text-[11px] tracking-widest text-gold uppercase font-semibold leading-none mt-1">
-                Bespoke Ledger Engineering
+                Clarity in every ledger
               </span>
             </div>
           </a>

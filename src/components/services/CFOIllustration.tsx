@@ -156,22 +156,20 @@ function CFOIllustration({ isActive }: { isActive: boolean }) {
       <text
         x="160"
         y="45"
-        fontSize="7"
-        fontFamily="var(--font-mono)"
+        fontSize="9"
         fill="currentColor"
         fillOpacity="0.5"
-        className="select-none font-bold"
+        className="select-none tracking-widest"
       >
         VALUATION APEX
       </text>
       <text
-        x="50"
+        x="20"
         y="85"
-        fontSize="7"
-        fontFamily="var(--font-mono)"
+        fontSize="9"
         fill="currentColor"
         fillOpacity="0.5"
-        className="select-none font-bold"
+        className="select-none tracking-widest"
       >
         RUNWAY THRESHOLD
       </text>

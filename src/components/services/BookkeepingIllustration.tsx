@@ -127,8 +127,7 @@ function BookkeepingIllustration({ isActive }: { isActive: boolean }) {
       <text
         x="60"
         y="50"
-        fontSize="7"
-        fontFamily="var(--font-mono)"
+        fontSize="9"
         fill="currentColor"
         fillOpacity="0.4"
         className="select-none font-bold"
@@ -138,8 +137,7 @@ function BookkeepingIllustration({ isActive }: { isActive: boolean }) {
       <text
         x="140"
         y="105"
-        fontSize="7"
-        fontFamily="var(--font-mono)"
+        fontSize="9"
         fill="currentColor"
         fillOpacity="0.4"
         className="select-none font-bold"

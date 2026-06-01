@@ -157,6 +157,7 @@ function Hero({ onContactClick }: { onContactClick: () => void }) {
               id="hero-image"
               src="/src/assets/hero.png"
               alt="Sophisticated modernist abstract pattern"
+
             />
           </motion.div>
 

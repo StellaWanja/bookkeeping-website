@@ -35,7 +35,7 @@ function LogoMarquee() {
  <section className="relative overflow-hidden py-12 select-none bg-alabaster">
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-8">
         <span className="font-bold text-sm uppercase tracking-widest text-black block text-center lg:text-left mb-2">
-          TRUSTED PARTNER AT ALL STAGES
+          TRUSTED BY BUSINESSES ACROSS ALL SECTORS
         </span>
       </div>
 
