@@ -121,10 +121,10 @@ function Footer({ onContactClick, style }: FooterProps) {
                   </span>
                   <a
                     id="footer-contact-phone-primary"
-                    href="tel:+12125550195"
+                    href="tel:+254106756099"
                     className="relative inline-block font-medium tracking-wide text-white/70 hover:text-white transition-colors group select-none py-0.5"
                   >
-                    +(254) 712 345 6789
+                    +(254) 106 756 099
                     <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-white transition-all duration-300 group-hover:w-full" />
                   </a>
                 </div>
@@ -135,10 +135,10 @@ function Footer({ onContactClick, style }: FooterProps) {
                   </span>
                   <a
                     id="footer-contact-email"
-                    href="mailto:vault@financialarchitect.private"
+                    href="mailto:nixkeana02@gmail.com"
                     className="relative inline-block font-medium tracking-wide text-white/70 hover:text-white transition-colors group select-none py-0.5"
                   >
-                    vault@financialarchitect.private
+                    nixkeana02@gmail.com
                     <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-white transition-all duration-300 group-hover:w-full" />
                   </a>
                 </div>
@@ -147,13 +147,12 @@ function Footer({ onContactClick, style }: FooterProps) {
                   <span className="text-xs uppercase tracking-widest block font-semibold">
                     location
                   </span>
-                  <a
-                    id="footer-contact-email"
-                    href="mailto:vault@financialarchitect.private"
+                  <p
+                    id="footer-contact-location"
                     className="relative inline-block font-medium tracking-wide text-white/70 hover:text-white transition-colors group select-none py-0.5"
                   >
                     Nairobi, Kenya
-                  </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -174,19 +173,10 @@ function Footer({ onContactClick, style }: FooterProps) {
                 LinkedIn
                 <ArrowUpRight className="w-3 h-3 text-white group-hover/social:translate-x-0.5 group-hover/social:-translate-y-0.5 transition-transform" />
               </a>
-              <a
-                id="social-link-twitter"
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors inline-flex items-center gap-1 group/social"
-              >
-                Twitter / X
-                <ArrowUpRight className="w-3 h-3 text-white group-hover/social:translate-x-0.5 group-hover/social:-translate-y-0.5 transition-transform" />
-              </a>
+
               <a
                 id="social-link-instagram"
-                href="https://instagram.com"
+                href="https://instagram.com/nixkeana_solutions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors inline-flex items-center gap-1 group/social"

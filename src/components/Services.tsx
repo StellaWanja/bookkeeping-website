@@ -16,12 +16,14 @@ export default function ServicesAccordion() {
 
   // Monitor the scroll position to dynamically set the active layout index trigger for drawing paths
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (latest < 0.45) {
+    if (latest < 0.28) {
       setActiveCardIndex(0);
-    } else if (latest >= 0.45 && latest < 0.8) {
+    } else if (latest >= 0.28 && latest < 0.53) {
       setActiveCardIndex(1);
-    } else {
+    } else if (latest >= 0.53 && latest < 0.78) {
       setActiveCardIndex(2);
+    } else {
+      setActiveCardIndex(3);
     }
   });
 
@@ -30,42 +32,59 @@ export default function ServicesAccordion() {
   const card0Y = 0;
   const card0Scale = useTransform(
     scrollYProgress,
-    [0, 0.05, 0.45, 0.55, 0.95, 1],
+    [0, 0.05, 0.25, 0.35, 0.95, 1],
     [1, 1, 0.95, 0.95, 0.92, 0.92],
   );
   const card0Opacity = useTransform(
     scrollYProgress,
-    [0, 0.05, 0.45, 0.55, 0.95, 1],
-    [1, 1, 0.7, 0.7, 0.5, 0.5],
+    [0, 0.05, 0.25, 0.35, 0.95, 1],
+    [1, 1, 0.65, 0.65, 0.45, 0.45],
   );
 
-  // Index 1 (Tax Strategy): slides up from below ("100%") between [0.05, 0.45] at steady speed
+  // Index 1 (Tax Strategy): slides up from below ("100%") between [0.05, 0.25]
   const card1Y = useTransform(
     scrollYProgress,
-    [0, 0.05, 0.45, 0.55, 0.95, 1],
+    [0, 0.05, 0.25, 0.3, 0.95, 1],
     ["100%", "100%", "0%", "0%", "0%", "0%"],
   );
   const card1Scale = useTransform(
     scrollYProgress,
-    [0, 0.45, 0.55, 0.95, 1],
-    [1, 1, 1, 0.96, 0.96],
+    [0, 0.25, 0.3, 0.5, 0.55, 1],
+    [1, 1, 1, 0.96, 0.96, 0.96],
   );
   const card1Opacity = useTransform(
     scrollYProgress,
-    [0, 0.05, 0.12, 0.45, 0.55, 0.95, 1],
-    [0, 0, 1, 1, 1, 0.7, 0.7],
+    [0, 0.05, 0.12, 0.5, 0.55, 1],
+    [0, 0, 1, 1, 0.65, 0.65],
   );
 
-  // Index 2 (Fractional CFO): slides up from below ("100%") between [0.55, 0.95] at the EXACT SAME speed (equal scroll delta!)
+  // Index 2 (Fractional CFO): slides up from below ("100%") between [0.30, 0.50]
   const card2Y = useTransform(
     scrollYProgress,
-    [0, 0.55, 0.95, 1],
-    ["100%", "100%", "0%", "0%"],
+    [0, 0.3, 0.5, 0.55, 0.95, 1],
+    ["100%", "100%", "0%", "0%", "0%", "0%"],
+  );
+  const card2Scale = useTransform(
+    scrollYProgress,
+    [0, 0.5, 0.55, 0.75, 0.8, 1],
+    [1, 1, 1, 0.96, 0.96, 0.96],
   );
   const card2Opacity = useTransform(
     scrollYProgress,
-    [0, 0.55, 0.62, 0.95, 1],
-    [0, 0, 1, 1, 1],
+    [0, 0.3, 0.38, 0.75, 0.8, 1],
+    [0, 0, 1, 1, 0.65, 0.65],
+  );
+
+  // Index 3 (Compliance & Audit): slides up from below ("100%") between [0.55, 0.75]
+  const card3Y = useTransform(
+    scrollYProgress,
+    [0, 0.55, 0.75, 1],
+    ["100%", "100%", "0%", "0%"],
+  );
+  const card3Opacity = useTransform(
+    scrollYProgress,
+    [0, 0.55, 0.63, 1],
+    [0, 0, 1, 1],
   );
 
   return (
@@ -117,13 +136,23 @@ export default function ServicesAccordion() {
               activeCardIndex={activeCardIndex}
             />
 
-            {/* Card 2: Fractional CFO */}
+            {/* Card 2: Payroll */}
             <CardSection
               service={SERVICES[2]}
               index={2}
               y={card2Y}
-              scale={1}
+              scale={card2Scale}
               opacity={card2Opacity}
+              activeCardIndex={activeCardIndex}
+            />
+
+            {/* Card 3: Fractional CFO */}
+            <CardSection
+              service={SERVICES[3]}
+              index={3}
+              y={card3Y}
+              scale={1}
+              opacity={card3Opacity}
               activeCardIndex={activeCardIndex}
             />
           </div>

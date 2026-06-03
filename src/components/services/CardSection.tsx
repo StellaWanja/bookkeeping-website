@@ -3,6 +3,7 @@ import { motion, MotionValue } from "motion/react";
 import BookkeepingIllustration from "./BookkeepingIllustration";
 import TaxIllustration from "./TaxIllustration";
 import CFOIllustration from "./CFOIllustration";
+import PayrollIllustration from "./PayrollIllustration";
 
 interface ServiceItem {
   id: string;
@@ -34,6 +35,8 @@ function ServiceIllustration({
       return <BookkeepingIllustration isActive={isActive} />;
     case "tax":
       return <TaxIllustration isActive={isActive} />;
+    case "payroll":
+      return <PayrollIllustration isActive={isActive} />;
     case "cfo":
       return <CFOIllustration isActive={isActive} />;
     default:

@@ -18,25 +18,27 @@ export const SERVICES = [
   {
     id: "bookkeeping",
     num: "01",
-    title: "Stay on top of your finances",
-    tagline: "BUILD A STRONG FINANCIAL FOUNDATION",
+    title: "Monthly Bookkeeping Services",
+    tagline: "ACCURATE RECORDS. COMPLETE VISIBILITY.",
     description:
-      "We maintain organized financial records that give you a clear view of your business performance. From daily transactions to monthly reconciliations, your books stay accurate, current, and ready when you need them.",
+      "Keep your financial records organized, up to date, and ready for informed decision-making. We handle the day-to-day bookkeeping so you always have a clear picture of your business performance.",
     features: [
       "Transaction recording and categorization",
-      "Bank, credit card and M-Pesa reconciliations",
-      "Monthly financial updates",
+      "Bank, credit card, and M-Pesa reconciliations",
+      "Monthly bookkeeping and ledger maintenance",
+      "Financial statement preparation",
       "Organized records year-round",
     ],
   },
   {
     id: "tax",
     num: "02",
-    title: "Navigate tax obligations with ease",
+    title: "Tax & eTIMS Support",
     tagline: "STAY COMPLIANT, STAY CONFIDENT",
     description:
-      "Tax obligations shouldn't be a source of stress. We help ensure your records are tax-ready and assist with compliance requirements so you can focus on running your business with confidence.",
+      "From eTIMS requirements to tax preparation, we help ensure your business remains compliant and prepared for regulatory obligations throughout the year.",
     features: [
+      "eTIMS invoice setup and management",
       "KRA tax filing support",
       "VAT and PAYE assistance",
       "Tax-ready financial records",
@@ -44,17 +46,33 @@ export const SERVICES = [
     ],
   },
   {
-    id: "cfo",
+    id: "payroll",
     num: "03",
-    title: "Make smarter financial decisions",
+    title: "Payroll Management",
+    tagline: "PAY YOUR TEAM WITH CONFIDENCE.",
+    description:
+      "Reliable payroll processes help ensure employees are paid accurately and on time while maintaining compliance with statutory requirements.",
+    features: [
+      "Payroll processing",
+      "Payslip generation",
+      "PAYE calculations and submissions",
+      "NSSF and SHIF administration",
+      "Payroll reporting and record keeping",
+    ],
+  },
+  {
+    id: "cfo",
+    num: "04",
+    title: "Financial Insights & Advisory",
     tagline: "TURN NUMBERS INTO OPPORTUNITIES",
     description:
-      "Your financial data tells a story. We help you understand that story through practical insights that support better planning, stronger cash flow management, and sustainable growth.",
+      "Financial reports are most valuable when they drive action. We provide insights and guidance that help you improve cash flow, plan ahead, and make confident business decisions.",
     features: [
       "Cash flow analysis",
       "Financial performance reviews",
       "Budgeting support",
       "Business growth insights",
+      "Management reporting",
     ],
   },
 ];
